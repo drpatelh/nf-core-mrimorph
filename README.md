@@ -1,34 +1,35 @@
 # ![nf-core/mrimorph](docs/images/nf-core-mrimorph_logo.png)
 
-**Mouse brain morphometry analysis pipeline for MRI imaging data**.
-
 [![Build Status](https://travis-ci.com/nf-core/mrimorph.svg?branch=master)](https://travis-ci.com/nf-core/mrimorph)
 [![Nextflow](https://img.shields.io/badge/nextflow-%E2%89%A50.32.0-brightgreen.svg)](https://www.nextflow.io/)
 
-[![install with bioconda](https://img.shields.io/badge/install%20with-bioconda-brightgreen.svg)](http://bioconda.github.io/)
 [![Docker](https://img.shields.io/docker/automated/nfcore/mrimorph.svg)](https://hub.docker.com/r/nfcore/mrimorph)
 
 ## Introduction
 
+**nfcore/mrimorph** is a bioinformatics pipeline used for the analysis of brain morphometry MRI imaging data.
+
 The pipeline is built using [Nextflow](https://www.nextflow.io), a workflow tool to run tasks across multiple compute infrastructures in a very portable manner. It comes with docker containers making installation trivial and results highly reproducible.
+
+<!-- TODO nf-core: Add a brief overview of what the pipeline does and how it works -->
 
 ## Quick Start
 
 i. Install [`nextflow`](https://nf-co.re/usage/installation)
 
-ii. Install one of [`docker`](https://docs.docker.com/engine/installation/), [`singularity`](https://www.sylabs.io/guides/3.0/user-guide/) or [`conda`](https://conda.io/miniconda.html)
+ii. Install one of [`docker`](https://docs.docker.com/engine/installation/) or [`singularity`](https://www.sylabs.io/guides/3.0/user-guide/).
 
 iii. Download the pipeline and test it on a minimal dataset with a single command
 
 ```bash
-nextflow run nf-core/mrimorph -profile test,<docker/singularity/conda>
+nextflow run nf-core/mrimorph -profile test,<docker/singularity>
 ```
 
 iv. Start running your own analysis!
 
 <!-- TODO nf-core: Update the default command above used to run the pipeline -->
 ```bash
-nextflow run nf-core/mrimorph -profile <docker/singularity/conda> --reads '*_R{1,2}.fastq.gz' --genome GRCh37
+nextflow run nf-core/mrimorph -profile <docker/singularity> --input '*.img'
 ```
 
 See [usage docs](docs/usage.md) for all of the available options when running the pipeline.
@@ -41,22 +42,22 @@ The nf-core/mrimorph pipeline comes with documentation about the pipeline, found
 2. Pipeline configuration
     * [Local installation](https://nf-co.re/usage/local_installation)
     * [Adding your own system config](https://nf-co.re/usage/adding_own_config)
-    * [Reference genomes](https://nf-co.re/usage/reference_genomes)
 3. [Running the pipeline](docs/usage.md)
 4. [Output and how to interpret the results](docs/output.md)
 5. [Troubleshooting](https://nf-co.re/usage/troubleshooting)
 
-<!-- TODO nf-core: Add a brief overview of what the pipeline does and how it works -->
-
 ## Credits
 
-nf-core/mrimorph was originally written by Harshil Patel.
+The pipeline was originally written by [The Bioinformatics & Biostatistics Group](https://www.crick.ac.uk/research/science-technology-platforms/bioinformatics-and-biostatistics/) in collaboration with [Jonny Kohl](https://www.crick.ac.uk/research/labs/johannes-kohl), [Patty Wai](mailto:patty.wai@crick.ac.uk) and [Bernard Siow](https://www.crick.ac.uk/research/find-a-researcher/bernard-siow) from [The Francis Crick Institute](https://www.crick.ac.uk/), London and [Ma Da](mailto:da_ma@sfu.ca) from [Simon Fraser University](https://www.sfu.ca/), British Columbia, Canada.
+
+The pipeline was developed by [Harshil Patel](mailto:harshil.patel@crick.ac.uk).
 
 ## Contributions and Support
 
 If you would like to contribute to this pipeline, please see the [contributing guidelines](.github/CONTRIBUTING.md).
 
 For further information or help, don't hesitate to get in touch on [Slack](https://nfcore.slack.com/channels/nf-core/mrimorph) (you can join with [this invite](https://nf-co.re/join/slack)).
+
 
 ## Citation
 
