@@ -22,14 +22,16 @@ ii. Install one of [`docker`](https://docs.docker.com/engine/installation/) or [
 iii. Download the pipeline and test it on a minimal dataset with a single command
 
 ```bash
-nextflow run nf-core/mrimorph -profile test,<docker/singularity>
+nextflow run nf-core/mrimorph -profile test,<docker/singularity/institute>
 ```
+
+> Please check [nf-core/configs](https://github.com/nf-core/configs#documentation) to see if a custom config file to run nf-core pipelines already exists for your Institute. If so, you can simply use `-profile institute` in your command. This will enable either `docker` or `singularity` and set the appropriate execution settings for your local compute environment.
 
 iv. Start running your own analysis!
 
 <!-- TODO nf-core: Update the default command above used to run the pipeline -->
 ```bash
-nextflow run nf-core/mrimorph -profile <docker/singularity> --input '*.img'
+nextflow run nf-core/mrimorph -profile <docker/singularity/institute> --input '*.img'
 ```
 
 See [usage docs](docs/usage.md) for all of the available options when running the pipeline.
@@ -57,7 +59,6 @@ The pipeline was developed by [Harshil Patel](mailto:harshil.patel@crick.ac.uk).
 If you would like to contribute to this pipeline, please see the [contributing guidelines](.github/CONTRIBUTING.md).
 
 For further information or help, don't hesitate to get in touch on [Slack](https://nfcore.slack.com/channels/nf-core/mrimorph) (you can join with [this invite](https://nf-co.re/join/slack)).
-
 
 ## Citation
 
